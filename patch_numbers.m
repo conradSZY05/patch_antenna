@@ -47,8 +47,13 @@ for i = 1:length(h_values)
 
     W_0 = w_h_ratio * h; % width of the feed line
 
+    SL = L + 6*h; % substrate/ground length and width 
+    SW = W + 6*h;
+
     % Display results in mm
     fprintf('Substrate height: %.1f mm\n', h*1e3);
+    fprintf('Substrate Length: %.3f mm\n', SL*1e3);
+    fprintf('Substrate Width: %.3f mm\n', SW*1e3);
     fprintf('Effective permittivity: %.4f\n', eps_reff);
     fprintf('Patch length L: %.3f mm\n', L*1e3);
     fprintf('Effective length: %.3f mm\n', L_eff*1e3);
